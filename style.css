@@ -71,3 +71,13 @@ body{
 .btn + .equals{
     background-color: aliceblue;
 }
+
+.btn:hover{
+    filter: brightness(1.2);
+    cursor:pointer;
+}
+
+.btn:active{
+    filter:brightness(0.9);
+    transform: translateY(2px);
+}
