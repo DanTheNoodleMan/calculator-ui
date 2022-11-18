@@ -50,6 +50,52 @@ function backspace() {
       .slice(0, -1)
   }
 
+//Operation functions
+
+function myEval(){
+    
+}
+
+function sum(a,b){
+    return a + b;
+}
+
+function minus(a,b){
+    return a - b;
+}
+
+function multiply(a,b){
+    return a * b;
+}
+
+function divide(a,b){
+    if(b == 0) return null;
+    else return a / b;
+}
+
+function percentage(a,b){
+    return (100*a) / b;
+}
+
+function operation(op, a, b){
+    a = Number(a);
+    b = Number(b);
+    switch(op){
+        case '+':
+            return sum(a,b);
+        case '-':
+            return minus(a,b);
+        case '*':
+            return multiply(a,b);
+        case '/':
+            return divide(a,b);
+        case '%':
+            return percentage(a,b);
+        default:
+            return null;
+    }
+}
+
 buttons.forEach(btn => btn.addEventListener('click', function(e){
     console.log(e.target);
 }));
