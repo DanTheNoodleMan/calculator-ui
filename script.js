@@ -15,10 +15,18 @@ numbers.forEach(num =>
   num.addEventListener('click', () => appendNum(num.textContent))
 )
 
+//BUTTON EVENT LISTENERS
 cancelBtn.addEventListener('click', resetInput);
 dotBtn.addEventListener('click', useDot);
+backspaceBtn.addEventListener('click', backspace);
 
+
+//BUTTON FUNCTIONS
 function appendNum(num){
+    if(userInput.textContent === '0'){
+        console.log(true);
+        resetInput();
+    }
     userInput.textContent += num;
 }
 
@@ -35,6 +43,12 @@ function useDot(){
     }  
     userInput.textContent += '.'
 }
+
+function backspace() {
+    userInput.textContent = userInput.textContent
+      .toString()
+      .slice(0, -1)
+  }
 
 buttons.forEach(btn => btn.addEventListener('click', function(e){
     console.log(e.target);
