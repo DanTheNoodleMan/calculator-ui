@@ -7,15 +7,32 @@ body{
     flex-direction: column;
 }
 
-.btns-container{
-    width:50vw;
+.calculator-container{
+    width:20vw;
     height: 70vh;
+    border: 2px solid orange;
+    border-radius: 10px;
+}
+
+.screen-container{
+    width:100%;
+    height:20%;
+    background-color: rgb(255, 235, 198);
+}
+
+.btns-container{
+    width:100%;
+    height:80%;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
 }
 
 .btn{
-    background-color: blue;
+    background-color: rgb(218, 185, 138);
     border:1px solid yellow;
+}
+
+.row-two{
+    grid-row: span 2;
 }
