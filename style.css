@@ -10,12 +10,14 @@ body{
     font-family: 'Noto Sans JP', sans-serif;
     height:100vh;
     width: 100vw;
+    background-color:#FFF5F0;
 }
 
 .calculator-container{
     width:400px;
     height: 700px;
     border-radius: 10px;
+    box-shadow: 0px 2px 20px #d3956291;
 }
 
 .screen-container{
@@ -34,18 +36,18 @@ body{
     border-radius: 10px 10px 0 0;
     color:aliceblue;
     font-size: 26px;
-
 }
 
 .screen-result{
     height:70%;
     background-color: rgb(250, 205, 107);
-    margin:0.5rem;
+    margin:10px 10px 0 10px;
     border-radius: 10px;
     color: white;
     font-size: 48px;
     text-align: right;
     font-weight: bold;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 
 .current-op{
@@ -78,7 +80,7 @@ body{
     color:black;
     font-size: 18px;
     font-weight: bold;
-}
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;}
 
 .btn:nth-child(4n){
     margin-right:10px;
@@ -89,12 +91,21 @@ body{
     margin-top: 5px;
 }
 
+button[data-type="operator"]{
+    background-color: rgba(255, 208, 0, 0.397);
+} 
+
+
+#ac, #backspace{
+    background-color: rgba(255, 104, 104, 0.452);
+}
+
 .row-two{
     grid-row: span 2;
 }
 
 .btn + .equals{
-    background-color: aliceblue;
+    background-color: rgba(248, 252, 255, 0.726);
 }
 
 .btn:hover{
