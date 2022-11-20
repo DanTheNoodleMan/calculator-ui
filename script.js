@@ -67,6 +67,7 @@ function backspace() {
   }
 
 
+//AUXILIARY FUNCTIONS
 function setOperator(op){
     if(operator !== null) myEval();
     operand1 = currentOpScreen.textContent;
@@ -93,13 +94,18 @@ function translateOperator(op){
             return null;
     }
 }
-//Operation functions
 
+function roundResult(res){
+    return Math.round(res * 1000) / 1000;
+}
+
+
+//Operation functions
 function myEval(){
     if(operator === null || needToReset) return;
     
     operand2 = currentOpScreen.textContent;
-    currentOpScreen.textContent = operation(operator, operand1, operand2);
+    currentOpScreen.textContent = roundResult(operation(operator, operand1, operand2));
     lastOpScreen.textContent = `${operand1} ${translateOperator(operator)} ${operand2} =`;
     operator = null;
     needToReset =  true;
@@ -118,8 +124,10 @@ function multiply(a,b){
 }
 
 function divide(a,b){
-    if(b == 0) return null;
-    else return a / b;
+    if(b == 0){
+        alert("Don't divide by 0, baka");
+        return null
+    } else return a / b;
 }
 
 function percentage(a,b){
